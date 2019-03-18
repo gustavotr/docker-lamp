@@ -6,6 +6,7 @@ services:
             - "80:80"
         volumes:
             - ./wordpress:/var/www/html/
+            - ./php/custom.ini:/usr/local/etc/php/conf.d/custom.ini
         links:
             - "db:database"
     db:
